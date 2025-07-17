@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Manhattan Nairobi - Bar, Restaurant & Nightclub</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">The Manhattan Nairobi</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="hero-section">
+            <h1>Experience Nairobi's Premier Nightlife & Dining</h1>
+            <p>Bar, Restaurant & Nightclub</p>
+            <a href="#reservations" class="btn">Make a Reservation</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section-padded">
+            <div class="container">
+                <h2>About The Manhattan Nairobi</h2>
+                <p>Welcome to The Manhattan Nairobi, where sophistication meets vibrant energy. Nestled in the heart of Nairobi, we offer an unparalleled experience combining exquisite dining, a stylish bar, and an electrifying nightclub atmosphere. Whether you're looking for a gourmet meal, a signature cocktail, or to dance the night away, The Manhattan is your destination.</p>
+            </div>
+        </section>
+
+        <section id="menu" class="section-padded bg-light">
+            <div class="container">
+                <h2>Explore Our Menus</h2>
+                <div class="menu-overview">
+                    <a href="food-menu.html" class="menu-card">
+                        <h3>Food Menu</h3>
+                        <p>Savor our exquisite culinary creations.</p>
+                    </a>
+                    <a href="drinks-menu.html" class="menu-card">
+                        <h3>Drinks Menu</h3>
+                        <p>Discover our extensive selection of beverages.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="section-padded">
+            <div class="container">
+                <h2>Upcoming Events & Live Music</h2>
+                <div class="event-list">
+                    <div class="event-card">
+                        <h3>Jazz Fusion Night</h3>
+                        <p class="event-date">Friday, July 19th</p>
+                        <p class="event-time">8:00 PM - Late</p>
+                        <p>Join us for an unforgettable evening of live jazz. Featuring local talents.</p>
+                    </div>
+                    <div class="event-card">
+                        <h3>DJ Spin Session: Afrobeats & House</h3>
+                        <p class="event-date">Saturday, July 20th</p>
+                        <p class="event-time">9:00 PM - Dawn</p>
+                        <p>Dance to the hottest Afrobeats and house tunes with DJ Lex.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-secondary">View Full Calendar</a>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-padded bg-light">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="image-grid">
+                    <img src="images/gallery1.jpg" alt="The Manhattan Interior">
+                    <img src="images/gallery2.jpg" alt="Cocktails at The Manhattan">
+                    <img src="images/gallery3.jpg" alt="Live Music Scene">
+                    <img src="images/gallery4.jpg" alt="Restaurant Dining Area">
+                </div>
+            </div>
+        </section>
+
+        <section id="reservations" class="section-padded">
+            <div class="container">
+                <h2>Make a Reservation</h2>
+                <p>Book your table or VIP lounge experience at The Manhattan Nairobi.</p>
+                <form class="reservation-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests:</label>
+                        <input type="number" id="guests" name="guests" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="occasion">Occasion (optional):</label>
+                        <input type="text" id="occasion" name="occasion">
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Requests:</label>
+                        <textarea id="notes" name="notes" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Confirm Reservation</button>
+                </form>
+                <p class="reservation-note">For groups larger than 10 or special events, please call us directly.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padded bg-dark text-white">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Location: [Your Street Address], [Your Area], Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+2547XXXXXXXX">+254 7XX XXX XXX</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@themanhattan.co.ke">info@themanhattan.co.ke</a></p>
+                    <p><i class="fas fa-clock"></i> Hours: Mon - Thu: 5 PM - 2 AM | Fri - Sat: 5 PM - 5 AM | Sun: 6 PM - 1 AM</p>
+                </div>
+                <div class="social-media-links">
+                    <a href="https://facebook.com/themanhattan" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/themanhattan_nairobi" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/themanhattan_ke" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.247293526154!2d36.81722295!3d-1.29206595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d0b6b%3A0xf6399e5a1b0d2d3!2sNairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 The Manhattan Nairobi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>
