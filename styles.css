@@ -419,14 +419,38 @@ h3 {
 }
 
 .social-media-links a {
-    color: var(--text-color-light);
     font-size: 2rem;
     margin: 0 15px;
     transition: color 0.3s ease;
+    display: inline-block;
 }
 
 .social-media-links a:hover {
-    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.social-media-links .fa-facebook-f {
+    color: #1877F2;
+}
+
+.social-media-links .fa-instagram {
+    color: #C13584;
+}
+
+.social-media-links .fa-tiktok {
+    color: #EE1D52;
+}
+
+.social-media-links .fa-facebook-f:hover {
+    color: #0d5dd9; /* Darker shade for hover */
+}
+
+.social-media-links .fa-instagram-f:hover {
+    color: #c21a56; /* Darker shade for hover */
+}
+
+.social-media-links .fa-tiktok-f:hover {
+    color: #cc0033; /* Darker shade for hover */
 }
 
 .map-container {
