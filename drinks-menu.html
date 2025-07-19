@@ -40,38 +40,402 @@
             <div class="container">
                 <h2>Cocktail Menu</h2>
 
+                <div class="search-bar-container">
+                    <input type="text" id="drinkSearch" placeholder="Your drink, one search away" onkeyup="filterDrinks()">
+                </div>
                 <div class="menu-section">
                     <h3>Signature Cocktails</h3>
-                    <ul>
-                        <li><strong>Nairobi Slide</strong> - Vodka, Berry Syrup, Lime <span class="price">Ksh 800</span></li>
-                        <li><strong>Sundowner</strong> - Gin, Passion and Mint Syrup, Ginger Ale <span class="price">Ksh 800</span></li>
-                        <li><strong>Glenova</strong> - Bourbon, Martini Rosso, A Dissaronno <span class="price">Ksh 900</span></li>
-                        <li><strong>Paloma</strong> - Don Julio Agave Syrup, Lime Dry Ice <span class="price">Ksh 1000</span></li>
-                        <li><strong>Whisky highball</strong> - Whisky, Basil, Sage, Apple Juice <span class="price">Ksh 800</span></li>
-                        <li><strong>Shirley Ginger</strong> - Rum Rosemary and Ginger Cordial, Ginger Ale <span class="price">Ksh 800</span></li>
-                        <li><strong>Gin Cooler</strong> - Gin Cucumber Tonic <span class="price">Ksh 800</span></li>
-                        <li><strong>Ketel One Premende</strong> - Vodka, Hibiscus and Tamarind Syrup, Lemonade <span class="price">Ksh 800</span></li>
+                    <ul id="signature-cocktails-list">
                         <li><strong>Earthquake</strong> - Vodka Gin Rum Tequila Guinness Cordial <span class="price">Ksh 1000</span></li>
+                        <li><strong>Gin Cooler</strong> - Gin Cucumber Tonic <span class="price">Ksh 800</span></li>
+                        <li><strong>Glenova</strong> - Bourbon, Martini Rosso, A Dissaronno <span class="price">Ksh 900</span></li>
+                        <li><strong>Ketel One Premende</strong> - Vodka, Hibiscus and Tamarind Syrup, Lemonade <span class="price">Ksh 800</span></li>
+                        <li><strong>Nairobi Slide</strong> - Vodka, Berry Syrup, Lime <span class="price">Ksh 800</span></li>
+                        <li><strong>Paloma</strong> - Don Julio Agave Syrup, Lime Dry Ice <span class="price">Ksh 1000</span></li>
+                        <li><strong>Shirley Ginger</strong> - Rum Rosemary and Ginger Cordial, Ginger Ale <span class="price">Ksh 800</span></li>
+                        <li><strong>Sundowner</strong> - Gin, Passion and Mint Syrup, Ginger Ale <span class="price">Ksh 800</span></li>
                         <li><strong>Tiki Vibez</strong> - Gin, Guava Earl Gray Syrup Ginger Ale <span class="price">Ksh 800</span></li>
+                        <li><strong>Whisky highball</strong> - Whisky, Basil, Sage, Apple Juice <span class="price">Ksh 800</span></li>
                     </ul>
                 </div>
 
                 <div class="menu-section">
                     <h3>Classic Cocktails</h3>
-                    <ul>
-                        <li><strong>Long Island</strong> - Gin Vodka Tequila Rum Coke <span class="price">Ksh 1000</span></li>
+                    <ul id="classic-cocktails-list">
                         <li><strong>Adios MF</strong> - Gin Vodka Tequila Rum Glue Cupado Tonic <span class="price">Ksh 1050</span></li>
-                        <li><strong>Negroni</strong> - Gin Campari Martini Rosso <span class="price">Ksh 700</span></li>
-                        <li><strong>Mojito</strong> - Rum Mint Tonic <span class="price">Ksh 700</span></li>
-                        <li><strong>Margarita</strong> - Tequila Lime Pineapple Sec <span class="price">Ksh 700</span></li>
                         <li><strong>Cosmopolitan</strong> - Vodka Cranberry Lime <span class="price">Ksh 800</span></li>
-                        <li><strong>Pinacolada</strong> - Rum Coconut Milk Pineapple Juice Lime <span class="price">Ksh 850</span></li>
-                        <li><strong>Whisky Sour</strong> - Whisky Lime Optional Aquafaba / Eggwhite <span class="price">Ksh 800</span></li>
-                        <li><strong>OldFashion</strong> - Bourbon Sugar Bitter <span class="price">Ksh 1000</span></li>
+                        <li><strong>Long Island</strong> - Gin Vodka Tequila Rum Coke <span class="price">Ksh 1000</span></li>
                         <li><strong>Manhattan Special</strong> - Whisky Vermouth Ornage Juice <span class="price">Ksh 800</span></li>
+                        <li><strong>Margarita</strong> - Tequila Lime Pineapple Sec <span class="price">Ksh 700</span></li>
+                        <li><strong>Mojito</strong> - Rum Mint Tonic <span class="price">Ksh 700</span></li>
+                        <li><strong>Negroni</strong> - Gin Campari Martini Rosso <span class="price">Ksh 700</span></li>
+                        <li><strong>OldFashion</strong> - Bourbon Sugar Bitter <span class="price">Ksh 1000</span></li>
+                        <li><strong>Pinacolada</strong> - Rum Coconut Milk Pineapple Juice Lime <span class="price">Ksh 850</span></li>
                         <li><strong>Tequilla Sunrise</strong> - Tequila Orange Juice Grenadine <span class="price">Ksh 700</span></li>
+                        <li><strong>Whisky Sour</strong> - Whisky Lime Optional Aquafaba / Eggwhite <span class="price">Ksh 800</span></li>
                     </ul>
                 </div>
+
+                <div class="menu-section">
+                    <h3>Beers</h3>
+                    <ul id="beers-list">
+                        <li><strong>Balozi</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Black Ice</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Corona</strong> <span class="price">Ksh 550</span></li>
+                        <li><strong>Desparado</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Guiness</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Heineken</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Heineken Zero</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Hunters Dry</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Hunters Gold</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Manyatta Lemon</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Manyatta Mango</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Manyatta PM</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Pineapple Punch</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Pilsner</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Savannah</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Savannah Lemon</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Snapp</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Tusker Cider</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Tusker Lager</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Tusker Lite</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>Tusker Malt</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>WhiteCap Crisp</strong> <span class="price">Ksh 350</span></li>
+                        <li><strong>WhiteCap Lager</strong> <span class="price">Ksh 350</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Soft Drinks</h3>
+                    <ul id="soft-drinks-list">
+                        <li><strong>Bitter Lemon</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Cocacola</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Delmonte</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Fanta</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Ginger Ale</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Keringet Sparkling 1L</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Mineral Water</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>RedBull</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>RedBull Sugar Free</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Soda Water</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Sprite</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Stoney</strong> <span class="price">Ksh 200</span></li>
+                        <li><strong>Tonic Water</strong> <span class="price">Ksh 200</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Gin/Vodka Bottles</h3>
+                    <ul id="gin-vodka-bottles-list">
+                        <li><strong>58 Classic Gin</strong> <span class="price">Ksh 3,000</span></li>
+                        <li><strong>Absolute Vodka 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Beefeater Gin 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Beefeater Orange 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Beefeater Pink 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Beluga</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Bombay Berry 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Bombay Saphire 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Ciroc Vodka 750ML</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Cruz Vodka 750ML</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Elit Vodka 750ML</strong> <span class="price">Ksh 8,500</span></li>
+                        <li><strong>Gilbeys</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Gordons 750ML</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Gordons Lime 750ML</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Gordons Orange 750ML</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Gordons Pink 750ML</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Grey Groose 750ML</strong> <span class="price">Ksh 10,000</span></li>
+                        <li><strong>Hendricks Gin 700ML</strong> <span class="price">Ksh 8,000</span></li>
+                        <li><strong>K.O Clear</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>K.O Pink</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Malfy Lemon 700ML</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Malfy Org 700ML</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Malfy Pink 700ML</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Smirnoff Vodka</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Stoli Vodka</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Tanqueray Gin 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Tanqueray No 10</strong> <span class="price">Ksh 8,500</span></li>
+                        <li><strong>Tanqueray Rangpur 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Tanqueray Royal 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Tanqueray Sevilla 750ML</strong> <span class="price">Ksh 6,000</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Liquor/Tequila Bottles</h3>
+                    <ul id="liquor-tequila-bottles-list">
+                        <li><strong>Amarula 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Azul Tequilla Reposado</strong> <span class="price">Ksh 50,000</span></li>
+                        <li><strong>Baileys 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Camino Clear</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Camino Gold</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Casamigo Blanco</strong> <span class="price">Ksh 19,500</span></li>
+                        <li><strong>Casamigo Reposado</strong> <span class="price">Ksh 19,500</span></li>
+                        <li><strong>Donjulio 1942 Anejo</strong> <span class="price">Ksh 40,000</span></li>
+                        <li><strong>Donjulio Anejo 750ML</strong> <span class="price">Ksh 13,000</span></li>
+                        <li><strong>Donjulio Blanco 750ML</strong> <span class="price">Ksh 10,500</span></li>
+                        <li><strong>Donjulio Rposado 750ML</strong> <span class="price">Ksh 11,000</span></li>
+                        <li><strong>Fire Water</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Jagermeister 700ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Jose Gold 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Jose Silver 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Larios 750ML</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Olmeca Clear</strong> <span class="price">Ksh 5,500</span></li>
+                        <li><strong>Olmeca Gold</strong> <span class="price">Ksh 5,500</span></li>
+                        <li><strong>Passion FTS</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Sheridans 1L</strong> <span class="price">Ksh 8,000</span></li>
+                        <li><strong>Southern Comfort 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Wines/Champagne Bottles</h3>
+                    <ul id="wines-champagne-bottles-list">
+                        <li><strong>1659 Cabernet</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1659 Classic Red</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1659 Natural S Rose</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1659 Sauvignon Blanc</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1659 Sweet Red</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1698 Chardonnay</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1698 Merlot</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>1698 Natural Sweet</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Belaire Gold</strong> <span class="price">Ksh 9,000</span></li>
+                        <li><strong>Belaire Luxe</strong> <span class="price">Ksh 9,000</span></li>
+                        <li><strong>Belaire Rose</strong> <span class="price">Ksh 9,000</span></li>
+                        <li><strong>Botega Gold</strong> <span class="price">Ksh 9,500</span></li>
+                        <li><strong>Botega Rose</strong> <span class="price">Ksh 9,500</span></li>
+                        <li><strong>Bruce Jack Malbec</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Bruce Jack Merlot</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Bruce Jack Shiraz</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Buiten Blanc</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Canti Prosecco</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Cederburg</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Dom Perignon Rose</strong> <span class="price">Ksh 65,500</span></li>
+                        <li><strong>Fantinel Prosecco</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Graham Beck Brut</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Graham Beck Rose</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Hesketh Chardonnay</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Hesketh D Merlot</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Hesketh Midday Shiraz</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Hesketh Pinot Noir</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Hesketh Sauvignon Blanc</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Independent Prosecco</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>JC Lerox Fleurette</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>JC Lerox Le Domain</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Martin Prosecco</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Moet</strong> <span class="price">Ksh 13,500</span></li>
+                        <li><strong>Mulderbosch B Sparkling</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Mulderbosch R Sparkling</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Nederburg Cabernet Sauvignon</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Nederburg Chardonnay</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Nederburg Rose</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Pier Marcel Red</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Pier Marcel White</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Rosso Nobile Cherry</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Rosso Nobile Chocolate</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Rosso Nobile Red</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Rupert Classique</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Rutini Cabernet</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>San Felipe Cabernet</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Sandeman Porto</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Sandeman Ruby</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Sandeman Tonny</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Secret Candy Rose</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Secret Honey White</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Secret Sweet Cherry Red</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Trumpeter Cabernet</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Trumpeter Malbec</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Trumpeter S Blanc</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Veuve Clicquot Brut</strong> <span class="price">Ksh 18,500</span></li>
+                        <li><strong>Veuve Clicquot Rose</strong> <span class="price">Ksh 18,500</span></li>
+                        <li><strong>Zonin Prosecco Cuvee</strong> <span class="price">Ksh 5,000</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Rum Bottles</h3>
+                    <ul id="rum-bottles-list">
+                        <li><strong>Bacardi Carta Blanca 700ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Bumbu XO 700ML</strong> <span class="price">Ksh 9,500</span></li>
+                        <li><strong>Captain Morgan 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Malibu 750ML</strong> <span class="price">Ksh 4,500</span></li>
+                        <li><strong>Myers Rum 1LTR</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Zaccapa</strong> <span class="price">Ksh 12,000</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Cognac Bottles</h3>
+                    <ul id="cognac-bottles-list">
+                        <li><strong>Hennessy VS 700ML</strong> <span class="price">Ksh 9,000</span></li>
+                        <li><strong>Hennessy V.S.O.P 700ML</strong> <span class="price">Ksh 16,500</span></li>
+                        <li><strong>Martel Blue Swift 700ML</strong> <span class="price">Ksh 15,000</span></li>
+                        <li><strong>Martel VS 700ML</strong> <span class="price">Ksh 9,000</span></li>
+                        <li><strong>Martel V.S.O.P 700ML</strong> <span class="price">Ksh 14,000</span></li>
+                        <li><strong>Martel XO</strong> <span class="price">Ksh 42,000</span></li>
+                        <li><strong>Remmy Martin V.S.O.P</strong> <span class="price">Ksh 14,000</span></li>
+                        <li><strong>Viceroy 10</strong> <span class="price">Ksh 7,000</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Vermouth</h3>
+                    <ul id="vermouth-list">
+                        <li><strong>Camapari</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Martin Bianco</strong> <span class="price">Ksh 4,000</span></li>
+                        <li><strong>Martin Rosso</strong> <span class="price">Ksh 4,000</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Whisky Bottles</h3>
+                    <ul id="whisky-bottles-list">
+                        <li><strong>Bains 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Ballantine's Finest</strong> <span class="price">Ksh 3,500</span></li>
+                        <li><strong>Bulleit Bourbon</strong> <span class="price">Ksh 6,000</span></li>
+                        <li><strong>Chivas 12YRS 750ML</strong> <span class="price">Ksh 7,500</span></li>
+                        <li><strong>Chivas 15YRS 750ML</strong> <span class="price">Ksh 12,500</span></li>
+                        <li><strong>Chivas 18YRS 750ML</strong> <span class="price">Ksh 13,500</span></li>
+                        <li><strong>Famous Grouse 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Gentleman Jack 70ML</strong> <span class="price">Ksh 8,000</span></li>
+                        <li><strong>Glenfiddich 12YRS 700ML</strong> <span class="price">Ksh 12,000</span></li>
+                        <li><strong>Glenfiddich 15YRS 700ML</strong> <span class="price">Ksh 15,000</span></li>
+                        <li><strong>Glenfiddich 18YRS 700ML</strong> <span class="price">Ksh 18,000</span></li>
+                        <li><strong>Glenlivet 12YRS 750ML</strong> <span class="price">Ksh 10,000</span></li>
+                        <li><strong>Glenlivet 15YRS 750ML</strong> <span class="price">Ksh 15,000</span></li>
+                        <li><strong>Glenlivet 18YRS 750ML</strong> <span class="price">Ksh 19,500</span></li>
+                        <li><strong>Glenlivet Founders 750ML</strong> <span class="price">Ksh 9,000</span></li>
+                        <li><strong>Glenmorange Org</strong> <span class="price">Ksh 10,000</span></li>
+                        <li><strong>Grants 12YRS 750ML</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Johnie Walker 18YRS 750ML</strong> <span class="price">Ksh 12,000</span></li>
+                        <li><strong>Johnie Walker Black Label 750ML</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Johnie Walker Blue Label 750ML</strong> <span class="price">Ksh 35,000</span></li>
+                        <li><strong>Johnie Walker Double Black 1L</strong> <span class="price">Ksh 10,000</span></li>
+                        <li><strong>Johnie Walkr Double Black 750ML</strong> <span class="price">Ksh 7,500</span></li>
+                        <li><strong>Johnie Walker Gold Label 750ML</strong> <span class="price">Ksh 11,000</span></li>
+                        <li><strong>Johnie Walker Green 750ML</strong> <span class="price">Ksh 9,500</span></li>
+                        <li><strong>Johnie Walker King George V 750ML</strong> <span class="price">Ksh 100,000</span></li>
+                        <li><strong>Jack Daniels Fire 700ML</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Jack Daniels Honey 700ML</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Jack Daniels Old No7 700ML</strong> <span class="price">Ksh 6,500</span></li>
+                        <li><strong>Jameson 750ML</strong> <span class="price">Ksh 5,000</span></li>
+                        <li><strong>Jameson Black Barrel 750ML</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Macallan Double Cask 12YRS 750ML</strong> <span class="price">Ksh 18,000</span></li>
+                        <li><strong>Macallan Tripple Cask 12YRS 750ML</strong> <span class="price">Ksh 18,000</span></li>
+                        <li><strong>Monkey Shoulder 700ML</strong> <span class="price">Ksh 7,000</span></li>
+                        <li><strong>Singleton Dufftown 12YRS 700ML</strong> <span class="price">Ksh 8,000</span></li>
+                        <li><strong>Singleton Dufftown 15YRS 700ML</strong> <span class="price">Ksh 10,000</span></li>
+                        <li><strong>Singleton Dufftown 18YRS 700ML</strong> <span class="price">Ksh 12,000</span></li>
+                        <li><strong>Tullamore Dew 750ML</strong> <span class="price">Ksh 4,500</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Whisky Tots</h3>
+                    <ul id="whisky-tots-list">
+                        <li><strong>Bulleit</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Chivas 12YRS</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Famous Grouse</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Glenfiddich 12YRS</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Glenfiddich 15YRS</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Glenfiddich 18YRS</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Glenlivet 12YRS</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Glenlivet 15YRS</strong> <span class="price">Ksh 700</span></li>
+                        <li><strong>Glenlivet 18YRS</strong> <span class="price">Ksh 900</span></li>
+                        <li><strong>Glenlivet Founders</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Glenmorange</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Grants</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Jack Daniels</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Jack Daniels Fire</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>JD Honey</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Jameson</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Jameson Black Barrel</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Johnie Walker 18YRS</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Johnie Walker Black Label</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Johnie Waler Double Black</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Johnie Walker Gold Label</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Monkey Shoulder</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Singleton 12YRS</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Singleton 15YRS</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Singleton 18YRS</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Green Label</strong> <span class="price">Ksh 400</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Rum Tots</h3>
+                    <ul id="rum-tots-list">
+                        <li><strong>Bacardi</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Captain Morgan</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Malibu</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Myers</strong> <span class="price">Ksh 300</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Liquor/Tequila Tots</h3>
+                    <ul id="liquor-tequila-tots-list">
+                        <li><strong>Amarula</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Baileys</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Camino Gold</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Camino Silver</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Don Julio Anejo</strong> <span class="price">Ksh 700</span></li>
+                        <li><strong>Don Julio Blanco</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Don Julio Reposado</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Fire Water</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>FTS Passion</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Jager Bomb</strong> <span class="price">Ksh 500</span></li>
+                        <li><strong>Jager Manifest</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Jagermeister</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Jose Gold</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Jose Silver</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Olmeca</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Sheridans</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Southern Comfort</strong> <span class="price">Ksh 300</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Cognac Tots</h3>
+                    <ul id="cognac-tots-list">
+                        <li><strong>Hennessy VS</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Hennessy VSOP</strong> <span class="price">Ksh 800</span></li>
+                        <li><strong>Martel Blue Swift</strong> <span class="price">Ksh 800</span></li>
+                        <li><strong>Martel VS</strong> <span class="price">Ksh 600</span></li>
+                        <li><strong>Martel V.S.O.P</strong> <span class="price">Ksh 800</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Gin/Vodka Tots</h3>
+                    <ul id="gin-vodka-tots-list">
+                        <li><strong>Absolute Vodka</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Ballantines</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Beefeater Pink</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Bombay Saphire</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Gordons</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Gordons Pink</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Hendricks</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>KO Gin</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Malfy</strong> <span class="price">Ksh 400</span></li>
+                        <li><strong>Smirnoff Vodka</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Tanqueray Gin</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Tanqueray No 10</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Tanqueray Rangpur</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Tanqueray Royal</strong> <span class="price">Ksh 300</span></li>
+                        <li><strong>Tanqueray Sevilla</strong> <span class="price">Ksh 300</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Ciger/Cigarrettes</h3>
+                    <ul id="ciger-cigarettes-list">
+                        <li><strong>Ciger</strong> <span class="price">Ksh 3,000</span></li>
+                        <li><strong>Dunhill Double Switch</strong> <span class="price">Ksh 750</span></li>
+                        <li><strong>Dunhill Single Switch</strong> <span class="price">Ksh 750</span></li>
+                        <li><strong>Embassy</strong> <span class="price">Ksh 750</span></li>
+                    </ul>
+                </div>
+
 
                 <p class="menu-note">Prices are subject to change. Please ask your server for today's specials.</p>
 
@@ -88,4 +452,38 @@
         </div>
     </footer>
 
+    <script>
+        function filterDrinks() {
+            var input, filter, menuSections, ul, li, a, i, txtValue;
+            input = document.getElementById('drinkSearch');
+            filter = input.value.toUpperCase();
+            menuSections = document.getElementsByClassName('menu-section');
+
+            for (let s = 0; s < menuSections.length; s++) {
+                ul = menuSections[s].getElementsByTagName('ul')[0];
+                li = ul.getElementsByTagName('li');
+                let sectionHasVisibleItems = false; // Flag to check if any item in the section is visible
+
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName('strong')[0]; // Target the strong tag for the drink name
+                    if (a) {
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                            sectionHasVisibleItems = true;
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+                // Show or hide the whole menu-section based on if it contains any visible items
+                if (sectionHasVisibleItems || filter === "") {
+                    menuSections[s].style.display = "";
+                } else {
+                    menuSections[s].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
 </html>

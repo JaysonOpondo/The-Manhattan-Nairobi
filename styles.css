@@ -489,6 +489,53 @@ footer p {
     margin-top: 40px;
 }
 
+.search-bar-container {
+    margin-bottom: 30px; 
+    text-align: center; 
+}
+
+#drinkSearch {
+    width: 100%; 
+    max-width: 600px; 
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    box-sizing: border-box; 
+    -webkit-transition: width 0.4s ease-in-out; 
+    transition: width 0.4s ease-in-out;
+    outline: none; 
+}
+
+#drinkSearch:focus {
+    border-color: #A06440; 
+    box-shadow: 0 0 8px rgba(160, 100, 64, 0.2); 
+}
+
+/* Style for the placeholder text */
+#drinkSearch::placeholder {
+    color: #888;
+    opacity: 1; 
+    font-style: italic;
+    font-family: 'Roboto', sans-serif; 
+}
+
+#drinkSearch:-ms-input-placeholder { 
+    color: #888;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+#drinkSearch::-ms-input-placeholder { 
+    color: #888;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* You might want to adjust the spacing around menu sections if needed after adding the search bar */
+.menu-section {
+    margin-bottom: 40px; 
+}
 
 /* Responsive Design (Media Queries) */
 @media (max-width: 768px) {
@@ -508,7 +555,7 @@ footer p {
     }
 
     .nav-links li {
-        opacity: 0; /* Hide by default, reveal with JS */
+        opacity: 0; 
         margin: 25px 0;
     }
 
@@ -517,8 +564,8 @@ footer p {
     }
 
     .burger {
-        display: block; /* Show burger on mobile */
-        z-index: 11; /* Ensure burger is clickable */
+        display: block; 
+        z-index: 11; 
     }
 
     .hero-section h1 {
@@ -529,14 +576,14 @@ footer p {
         font-size: 1.2rem;
     }
 
-    .menu-tab { /* This class is not used in the provided menu files, consider removing if not needed for future tabs */
+    .menu-tab {  
         display: block;
         margin: 10px auto;
         width: 80%;
     }
 
     .image-grid {
-        grid-template-columns: 1fr; /* Stack images on small screens */
+        grid-template-columns: 1fr; 
     }
 
     h2 {
@@ -552,7 +599,7 @@ footer p {
     }
 
     .menu-card {
-        max-width: 90%; /* Allow cards to take more width on small screens */
+        max-width: 90%; 
     }
 }
 
