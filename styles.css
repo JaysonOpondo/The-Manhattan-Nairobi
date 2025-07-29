@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #121212; 
+    color: #E0E0E0; 
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
-    color: #222;
+    color: #F8F8F8; 
     margin-top: 0;
     margin-bottom: 0.5em;
 }
@@ -25,13 +25,13 @@ p {
 }
 
 a {
-    color: #A0522D; /* Sienna */
+    color: #B8860B; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #CD853F; /* Peru */
+    color: #DAA520; 
 }
 
 .container {
@@ -48,7 +48,112 @@ a:hover {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #1F1F1F;
+    color: #fff;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    color: #F8F8F8;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #E0E0E0; 
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #B8860B; 
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Burger Icon (for mobile) */
+.burger {
+    display: none; 
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg'); 
+    /* Replace 'images/hero-bg.jpg' with a dark, sophisticated background image related to food/drinks if you have one. */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff; 
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #E0E0E0; 
+}
+
+.hero-section .btn {
+    margin: 10px;
 }
 
 /* Buttons */
@@ -56,11 +161,9 @@ a:hover {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    cursor: pointer;
-    text-align: center;
 }
 
 .btn-primary {
@@ -76,120 +179,13 @@ a:hover {
 
 .btn-secondary {
     background-color: transparent;
-    color: #A0522D; /* Sienna */
-    border: 2px solid #A0522D;
+    color: #B8860B; 
+    border: 2px solid #B8860B; 
 }
 
 .btn-secondary:hover {
-    background-color: #A0522D;
-    color: #fff;
-}
-
-/* Header and Navigation */
-header {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 15px 0;
-    position: relative;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-}
-
-nav .logo a {
-    color: #fff;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    font-weight: 700;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: #fff;
-    font-weight: 400;
-    padding: 5px 0;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #A0522D;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-}
-
-/* Burger Menu */
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Hero Sections */
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.large-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/your/new-hero-image.jpg'); /* Placeholder */
-    height: 60vh;
-    padding: 0 20px;
-}
-
-.small-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('your-new-image.jpg'); /* Placeholder */
-    height: 40vh;
-    padding: 0 20px;
-}
-
-.hero-section h1 {
-    font-size: 3.5em;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.hero-section p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    background-color: #B8860B;
+    color: #121212; 
 }
 
 /* Sections */
@@ -197,94 +193,115 @@ nav .logo a {
     padding: 80px 0;
 }
 
-.section-dark {
-    background-color: #222;
-    color: #f8f8f8;
+/* About Us Section */
+#about {
+    background-color: #121212; 
 }
 
-.section-dark h2, .section-dark h3 {
-    color: #fff;
+#about h2 {
+    color: #B8860B; 
+    margin-bottom: 20px;
 }
 
-/* Menu Cards (for index.html) */
+#about p {
+    color: #E0E0E0; 
+}
+
+/* Menu Cards Section (Index Page) */
 .menu-cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 40px;
-    flex-wrap: wrap;
 }
 
 .menu-card {
-    background-color: #fff;
-    color: #333;
-    padding: 30px;
+    background-color: #1F1F1F; 
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); 
+    padding: 30px;
     text-align: center;
-    flex: 1;
-    min-width: 280px;
+    width: 30%;
     max-width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333; 
 }
 
 .menu-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
-.menu-card i {
-    font-size: 3em;
-    color: #A0522D;
-    margin-bottom: 15px;
+.menu-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #B8860B; 
 }
 
 .menu-card h3 {
-    font-size: 1.6em;
+    color: #F8F8F8; 
     margin-bottom: 10px;
-    color: #222;
 }
 
-/* Menu Details Pages (drinks-menu.html, food-menu.html) */
+.menu-card p {
+    color: #A0A0A0; 
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+/* Search Bar Container (Menu Pages) */
 .search-bar-container {
-    margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .search-bar-container input[type="text"] {
+    background-color: #2D2D2D; 
+    color: #E0E0E0; 
+    border: 1px solid #555; 
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1em;
     width: 100%;
     max-width: 500px;
-    padding: 12px 20px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    font-size: 1em;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.search-bar-container input[type="text"]:focus {
-    border-color: #A0522D;
-    box-shadow: 0 0 8px rgba(160, 82, 45, 0.2);
+.search-bar-container input[type="text"]::placeholder {
+    color: #A0A0A0; 
 }
 
+.search-bar-container input[type="text"]:focus {
+    border-color: #B8860B; 
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.4); 
+}
+
+/* Menu Details (drinks-menu.html & food-menu.html) */
 .menu-section {
-    background-color: #fff;
+    background-color: #1F1F1F; 
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     margin-bottom: 30px;
+    border: 1px solid #333; 
 }
 
 .menu-section h3 {
-    color: #A0522D;
-    border-bottom: 2px solid #eee;
+    color: #B8860B; 
+    border-bottom: 2px solid #333; 
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 1.6em;
 }
 
 .menu-section h4 {
-    color: #555;
+    color: #D4AF37; 
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.3em;
@@ -297,12 +314,12 @@ nav .logo a {
 }
 
 .menu-section ul li {
-    padding: 10px 0;
-    border-bottom: 1px dashed #eee;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap; 
+    align-items: baseline;
+    padding: 12px 0; 
+    border-bottom: 1px dashed #444; 
+    color: #E0E0E0; 
 }
 
 .menu-section ul li:last-child {
@@ -310,223 +327,117 @@ nav .logo a {
 }
 
 .menu-section ul li strong {
+    color: #F8F8F8; 
     font-weight: 700;
-    color: #333;
-    flex-basis: 70%; 
+    flex-grow: 1; 
+    padding-right: 15px; 
 }
 
 .menu-section ul li .price {
+    color: #B8860B; 
     font-weight: 700;
-    color: #A0522D;
-    flex-basis: 25%; 
-    text-align: right;
+    white-space: nowrap; 
 }
 
 /* Nested lists for descriptions */
 .menu-section ul ul {
-    list-style: disc;
     margin-top: 5px;
-    margin-left: 20px;
-    font-size: 0.9em;
-    color: #666;
-    width: 100%; 
+    padding-left: 20px; 
 }
 
 .menu-section ul ul li {
-    border-bottom: none;
     padding: 0;
-    margin-bottom: 5px;
+    border: none;
+    font-size: 0.9em;
+    color: #A0A0A0; 
+    display: list-item; 
 }
 
+/* Menu Note */
 .menu-note {
+    color: #A0A0A0; 
     font-style: italic;
-    color: #777;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
+/* Back to Menu Home Button */
 .back-to-menu-home {
     text-align: center;
     margin-top: 40px;
 }
 
 /* Events Section */
-.event-preview {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+#events {
+    background-color: #1F1F1F; 
+    color: #E0E0E0;
 }
 
-.event-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    min-width: 280px;
-    max-width: 450px;
-    text-align: left;
+#events h2,
+#events p {
+    color: #F8F8F8; 
 }
 
-.event-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    margin-bottom: 15px;
+/* Gallery Section */
+#gallery {
+    background-color: #121212; 
 }
 
-.event-item h3 {
-    color: #A0522D;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.event-date {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.event-date i {
-    margin-right: 5px;
-}
-
-/* Gallery Section - Carousel */
-.carousel-container {
-    position: relative;
-    max-width: 900px; 
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-slide {
-    display: none; 
-    width: 100%;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 450px; 
-    object-fit: cover;
-    border-radius: 8px; 
-}
-
-/* Navigation arrows */
-.carousel-prev, .carousel-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-}
-
-.carousel-prev {
-    left: 0; 
-    border-radius: 0 3px 3px 0;
-}
-
-.carousel-next {
-    right: 0; 
-    border-radius: 3px 0 0 3px;
-}
-
-.carousel-prev:hover, .carousel-next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Dots indicator */
-.carousel-dots {
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot.active, .dot:hover {
-    background-color: #A0522D;
-}
-
+/* ... existing .gallery-grid, .gallery-item, etc. styles would go here, adjusted for dark theme ... */
 
 /* Contact Section */
-#contact .container {
+#contact {
+    background-color: #1F1F1F; 
+    color: #E0E0E0;
+}
+
+#contact h2 {
+    color: #B8860B; 
+}
+
+#contact p {
+    color: #E0E0E0;
+}
+
+#contact .contact-info i {
+    color: #B8860B; 
+}
+
+/* Footer */
+footer {
+    background-color: #1F1F1F; 
+    color: #A0A0A0; 
     text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #333; 
 }
 
-.contact-info {
-    margin-top: 30px;
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-.contact-info i {
-    color: #A0522D;
-    margin-right: 10px;
-    width: 20px; 
-    text-align: center;
-}
-
+/* Social Media Links */
 .social-media-links {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 15px;
 }
 
-.social-icon {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    border-radius: 50%;
-    background-color: #A0522D;
-    color: #fff;
-    font-size: 1.2em;
+.social-media-links .social-icon {
+    color: #A0A0A0; 
+    font-size: 1.5em;
     margin: 0 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-    background-color: #CD853F;
-    transform: translateY(-5px);
+.social-media-links .social-icon:hover {
+    color: #B8860B; 
 }
 
+/* Map Container */
 .map-container {
+    margin-top: 30px;
     position: relative;
     padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
-    max-width: 100%;
-    background: #000;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .map-container iframe {
@@ -538,29 +449,22 @@ nav .logo a {
     border: 0;
 }
 
-/* Footer */
-footer {
-    background-color: #1a1a1a;
-    color: #bbb;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 0.9em;
-}
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .nav-links {
-        margin-left: auto; 
-    }
-}
-
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    /* Navigation */
+    body.nav-active {
+        overflow: hidden; 
+    }
+
+    nav {
+        padding: 0 15px;
+    }
+
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: 0;
-        top: 70px; 
-        height: calc(100vh - 70px);
+        top: 0;
+        height: 100vh;
         background-color: #1a1a1a;
         flex-direction: column;
         align-items: center;
@@ -582,6 +486,19 @@ footer {
 
     .burger {
         display: block;
+    }
+
+    /* Burger Animation */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     /* Hero Section */
@@ -613,34 +530,33 @@ footer {
     /* Menu Details */
     .menu-section ul li strong,
     .menu-section ul li .price {
-        flex-basis: 100%;
-        text-align: left;
+        font-size: 0.95em;
     }
 
+    .menu-section h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section p {
+        font-size: 0.9em;
+    }
+
+    .menu-section {
+        padding: 20px;
+    }
+
+    .menu-section h3 {
+        font-size: 1.2em;
+    }
+
+    .menu-section ul li strong,
     .menu-section ul li .price {
-        margin-top: 5px;
+        font-size: 0.9em;
     }
-
-    /* Gallery */
-    .carousel-slide img {
-        height: 300px;
-    }
-
-    .carousel-prev, .carousel-next {
-        padding: 10px;
-        font-size: 20px;
-    }
-}
-
-/* Burger Animation */
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
 }
