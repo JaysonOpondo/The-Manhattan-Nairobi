@@ -302,7 +302,7 @@ nav .logo a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; /* Allows price to wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .menu-section ul li:last-child {
@@ -312,13 +312,13 @@ nav .logo a {
 .menu-section ul li strong {
     font-weight: 700;
     color: #333;
-    flex-basis: 70%; /* Give more space to name */
+    flex-basis: 70%; 
 }
 
 .menu-section ul li .price {
     font-weight: 700;
     color: #A0522D;
-    flex-basis: 25%; /* Give less space to price */
+    flex-basis: 25%; 
     text-align: right;
 }
 
@@ -329,7 +329,7 @@ nav .logo a {
     margin-left: 20px;
     font-size: 0.9em;
     color: #666;
-    width: 100%; /* Take full width for description */
+    width: 100%; 
 }
 
 .menu-section ul ul li {
@@ -369,7 +369,7 @@ nav .logo a {
     min-width: 280px;
     max-width: 450px;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .event-item:hover { /* Added hover effect */
@@ -439,7 +439,7 @@ nav .logo a {
 .contact-info i {
     color: #A0522D;
     margin-right: 10px;
-    width: 20px; /* Align icons */
+    width: 20px; 
     text-align: center;
 }
 
@@ -468,7 +468,7 @@ nav .logo a {
 
 .map-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -499,7 +499,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 992px) {
     .nav-links {
-        margin-left: auto; /* Push nav links to the right */
+        margin-left: auto; 
     }
 }
 
@@ -508,7 +508,7 @@ footer {
     .nav-links {
         position: absolute;
         right: 0;
-        top: 70px; /* Adjust based on header height */
+        top: 70px; 
         height: calc(100vh - 70px);
         background-color: #1a1a1a;
         flex-direction: column;
