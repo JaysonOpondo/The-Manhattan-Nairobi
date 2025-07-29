@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Menu - The Manhattan Nairobi</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/5eafb43833.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -17,7 +17,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#menu" class="active">Menu</a></li> <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#menu" class="active">Menu</a></li>
+                <li><a href="index.html#events">Events</a></li>
                 <li><a href="index.html#gallery">Gallery</a></li>
                 <li><a href="index.html#reservations">Reservations</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
@@ -28,7 +29,8 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        <div class="hero-section small-hero"> <h1>Our Culinary Delights</h1>
+        <div class="hero-section small-hero">
+            <h1>Our Culinary Delights</h1>
             <p>A taste of Manhattan, reimagined in Nairobi.</p>
         </div>
     </header>
@@ -37,6 +39,10 @@
         <section id="food-menu-details" class="section-padded">
             <div class="container">
                 <h2>Food Menu</h2>
+
+                <div class="search-bar-container">
+                    <input type="text" id="foodSearch" placeholder="Search for your favorite dish..." onkeyup="filterFood()">
+                </div>
 
                 <div class="menu-section">
                     <h3>Main Courses</h3>
@@ -237,9 +243,8 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 The Manhattan Nairobi. All rights reserved.</p>
+            <p>&copy; 2025 The Manhattan Nairobi. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>

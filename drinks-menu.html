@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktail Menu - The Manhattan Nairobi</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script> <!-- Link to global script.js -->
     <script src="https://kit.fontawesome.com/5eafb43833.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -41,6 +41,7 @@
                 <h2>Cocktail Menu</h2>
 
                 <div class="search-bar-container">
+                    <!-- Call filterDrinks from global script.js -->
                     <input type="text" id="drinkSearch" placeholder="Your favorite drink, one search away" onkeyup="filterDrinks()">
                 </div>
                 <div class="menu-section">
@@ -448,42 +449,8 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 The Manhattan Nairobi. All rights reserved.</p>
+            <p>&copy; 2025 The Manhattan Nairobi. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        function filterDrinks() {
-            var input, filter, menuSections, ul, li, a, i, txtValue;
-            input = document.getElementById('drinkSearch');
-            filter = input.value.toUpperCase();
-            menuSections = document.getElementsByClassName('menu-section');
-
-            for (let s = 0; s < menuSections.length; s++) {
-                ul = menuSections[s].getElementsByTagName('ul')[0];
-                li = ul.getElementsByTagName('li');
-                let sectionHasVisibleItems = false; // Flag to check if any item in the section is visible
-
-                for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName('strong')[0]; // Target the strong tag for the drink name
-                    if (a) {
-                        txtValue = a.textContent || a.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            li[i].style.display = "";
-                            sectionHasVisibleItems = true;
-                        } else {
-                            li[i].style.display = "none";
-                        }
-                    }
-                }
-                // Show or hide the whole menu-section based on if it contains any visible items
-                if (sectionHasVisibleItems || filter === "") {
-                    menuSections[s].style.display = "";
-                } else {
-                    menuSections[s].style.display = "none";
-                }
-            }
-        }
-    </script>
 </body>
 </html>

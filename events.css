@@ -64,13 +64,13 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #A0522D; 
+    background-color: #A0522D; /* Sienna */
     color: #fff;
     border: 2px solid #A0522D;
 }
 
 .btn-primary:hover {
-    background-color: #8B4513; 
+    background-color: #8B4513; /* SaddleBrown */
     border-color: #8B4513;
 }
 
@@ -302,7 +302,7 @@ nav .logo a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Allows price to wrap on smaller screens */
 }
 
 .menu-section ul li:last-child {
@@ -312,13 +312,13 @@ nav .logo a {
 .menu-section ul li strong {
     font-weight: 700;
     color: #333;
-    flex-basis: 70%; 
+    flex-basis: 70%; /* Give more space to name */
 }
 
 .menu-section ul li .price {
     font-weight: 700;
     color: #A0522D;
-    flex-basis: 25%; 
+    flex-basis: 25%; /* Give less space to price */
     text-align: right;
 }
 
@@ -329,7 +329,7 @@ nav .logo a {
     margin-left: 20px;
     font-size: 0.9em;
     color: #666;
-    width: 100%; 
+    width: 100%; /* Take full width for description */
 }
 
 .menu-section ul ul li {
@@ -369,6 +369,12 @@ nav .logo a {
     min-width: 280px;
     max-width: 450px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+
+.event-item:hover { /* Added hover effect */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .event-item img {
@@ -394,83 +400,26 @@ nav .logo a {
     margin-right: 5px;
 }
 
-/* Gallery Section - Carousel */
-.carousel-container {
-    position: relative;
-    max-width: 900px; 
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
 }
 
-.carousel-slide {
-    display: none; 
+.gallery-grid img {
     width: 100%;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 450px; 
+    height: 200px;
     object-fit: cover;
-    border-radius: 8px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Navigation arrows */
-.carousel-prev, .carousel-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 25px;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: rgba(0,0,0,0.5);
-    border: none;
+.gallery-grid img:hover {
+    transform: scale(1.03);
 }
-
-.carousel-prev {
-    left: 0; 
-    border-radius: 0 3px 3px 0;
-}
-
-.carousel-next {
-    right: 0; 
-    border-radius: 3px 0 0 3px;
-}
-
-.carousel-prev:hover, .carousel-next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Dots indicator */
-.carousel-dots {
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot.active, .dot:hover {
-    background-color: #A0522D;
-}
-
 
 /* Contact Section */
 #contact .container {
@@ -490,7 +439,7 @@ nav .logo a {
 .contact-info i {
     color: #A0522D;
     margin-right: 10px;
-    width: 20px; 
+    width: 20px; /* Align icons */
     text-align: center;
 }
 
@@ -519,7 +468,7 @@ nav .logo a {
 
 .map-container {
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -550,7 +499,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 992px) {
     .nav-links {
-        margin-left: auto; 
+        margin-left: auto; /* Push nav links to the right */
     }
 }
 
@@ -559,7 +508,7 @@ footer {
     .nav-links {
         position: absolute;
         right: 0;
-        top: 70px; 
+        top: 70px; /* Adjust based on header height */
         height: calc(100vh - 70px);
         background-color: #1a1a1a;
         flex-direction: column;
@@ -622,13 +571,8 @@ footer {
     }
 
     /* Gallery */
-    .carousel-slide img {
-        height: 300px;
-    }
-
-    .carousel-prev, .carousel-next {
-        padding: 10px;
-        font-size: 20px;
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
 }
 

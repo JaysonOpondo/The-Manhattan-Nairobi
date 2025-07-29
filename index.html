@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Manhattan Nairobi - The Music and Culture Capital of Nairobi</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js"></script>
+    <title>The Manhattan Nairobi - Experience Elegance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="events.css">
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/5eafb43833.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,7 +21,6 @@
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#reservations">Reservations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="burger">
@@ -28,32 +29,35 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        <div class="hero-section">
-            <h1>Experience Nairobi's Premier Nightlife & Dining</h1>
+        <div class="hero-section large-hero">
+            <h1>Welcome to The Manhattan Nairobi</h1>
             <p>The Music and Culture Capital of Nairobi</p>
-            <a href="#reservations" class="btn">Make a Reservation</a>
-        </div>
+            </div>
     </header>
 
     <main>
         <section id="about" class="section-padded">
             <div class="container">
-                <h2>About The Manhattan Nairobi</h2>
-                <p>Welcome to The Manhattan Nairobi, where sophistication meets vibrant energy. Nestled in the heart of Nairobi, we offer an unparalleled experience combining exquisite dining, a stylish bar, and an electrifying nightclub atmosphere. Whether you're looking for a gourmet meal, a signature cocktail, or to dance the night away, The Manhattan is your destination.</p>
+                <h2>About Us</h2>
+                <p>The Manhattan Nairobi is more than just a restaurant and bar; it's an experience. Nestled in the heart of Nairobi, we offer a sophisticated ambiance, exquisite culinary delights, and a curated selection of beverages. Our commitment is to provide an unforgettable experience for every guest, whether you're here for a casual drink, a romantic dinner, or a lively event.</p>
+                <p>Our chefs craft dishes with the freshest local ingredients, blending international flavors with a touch of Kenyan heritage. Our mixologists are artists, creating classic cocktails and innovative new drinks that tantalize the senses. Come and discover why The Manhattan Nairobi is the city's premier destination for fine dining and entertainment.</p>
             </div>
         </section>
 
-        <section id="menu" class="section-padded bg-light">
-            <div class="container">
-                <h2>Explore Our Menus</h2>
-                <div class="menu-overview">
+        <section id="menu" class="section-padded section-dark">
+            <div class="container text-center">
+                <h2>Our Menus</h2>
+                <p>Explore our diverse offerings, from gourmet dishes to handcrafted cocktails.</p>
+                <div class="menu-cards">
                     <a href="food-menu.html" class="menu-card">
+                        <i class="fas fa-utensils"></i>
                         <h3>Food Menu</h3>
                         <p>Savor our exquisite culinary creations.</p>
                     </a>
                     <a href="drinks-menu.html" class="menu-card">
+                        <i class="fas fa-cocktail"></i>
                         <h3>Drinks Menu</h3>
-                        <p>Discover our extensive selection of beverages.</p>
+                        <p>Discover our signature cocktails and premium beverages.</p>
                     </a>
                 </div>
             </div>
@@ -61,96 +65,125 @@
 
         <section id="events" class="section-padded">
             <div class="container">
-                <h2>Upcoming Events & Live Music</h2>
-                <div class="event-list">
-                    <div class="event-card">
-                        <h3>Jazz Fusion Night</h3>
-                        <p class="event-date">Friday, July 19th</p>
-                        <p class="event-time">8:00 PM - Late</p>
-                        <p>Join us for an unforgettable evening of live jazz. Featuring local talents.</p>
+                <h2>Upcoming Events</h2>
+                <p>Join us for an exciting lineup of live music, themed nights, and special gatherings.</p>
+                <div class="event-preview">
+                    <div class="event-item">
+                        <img src="https://placehold.co/400x250/E0BBE4/FFFFFF?text=Live+Music" alt="Live Music Event" class="img-responsive">
+                        <h3>Monday Blues</h3>
+                        <p class="event-date"><i class="far fa-calendar-alt"></i>July, 28th</p>
+                        <p>Hosted by DJ Teff, and Pakie</p>
+                        <p>Mondays don't have to be boring, unwind with good music, chilled drinks, and smooth vibes to start your week right.</p>
                     </div>
-                    <div class="event-card">
-                        <h3>DJ Spin Session: Afrobeats & House</h3>
-                        <p class="event-date">Saturday, July 20th</p>
-                        <p class="event-time">9:00 PM - Dawn</p>
-                        <p>Dance to the hottest Afrobeats and house tunes with DJ Lex.</p>
+                    <div class="event-item">
+                        <img src="https://placehold.co/400x250/957DAD/FFFFFF?text=Cocktail+Workshop" alt="Cocktail Workshop Event" class="img-responsive">
+                        <h3>Dohty Family Reggae</h3>
+                        <p class="event-date"><i class="far fa-calendar-alt"></i> July, 29th</p>
+                        <p>Hosted by Manduve, Brian, and Gasoh</p>
+                        <p>Get ready for an unfforgettable night with Kriss Darlin and the full Dohty Family Crew</p>
                     </div>
                 </div>
-                <a href="#" class="btn btn-secondary">View Full Calendar</a>
+                <div class="text-center">
+                    <a href="events-calendar.html" class="btn btn-secondary">View Full Events Calendar</a>
+                </div>
             </div>
         </section>
 
-        <section id="gallery" class="section-padded bg-light">
-            <div class="container">
+        <section id="gallery" class="section-padded section-dark">
+            <div class="container text-center">
                 <h2>Gallery</h2>
-                <div class="image-grid">
-                    <img src="images/gallery1.jpg" alt="The Manhattan Interior">
-                    <img src="images/gallery2.jpg" alt="Cocktails at The Manhattan">
-                    <img src="images/gallery3.jpg" alt="Live Music Scene">
-                    <img src="images/gallery4.jpg" alt="Restaurant Dining Area">
+                <p>A glimpse into the ambiance and experiences at The Manhattan Nairobi.</p>
+
+                <h3>Interior</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/FFC72C/000000?text=Interior+1" alt="Manhattan Interior 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/FFC72C/000000?text=Interior+2" alt="Manhattan Interior 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/FFC72C/000000?text=Interior+3" alt="Manhattan Interior 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/FFC72C/000000?text=Interior+4" alt="Manhattan Interior 4">
+                    </div>
+                    <button class="carousel-prev">❮</button>
+                    <button class="carousel-next">❯</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h3>Food & Drinks</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/A0522D/FFFFFF?text=Gourmet+Dish+1" alt="Gourmet Dish 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/A0522D/FFFFFF?text=Signature+Cocktail+1" alt="Signature Cocktail 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/A0522D/FFFFFF?text=Appetizer+Platter" alt="Appetizer Platter">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/A0522D/FFFFFF?text=Craft+Beer+Selection" alt="Craft Beer Selection">
+                    </div>
+                    <button class="carousel-prev">❮</button>
+                    <button class="carousel-next">❯</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+                <h3>Live Music Scene</h3>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/4CAF50/FFFFFF?text=Live+Band+1" alt="Live Band Performance 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/4CAF50/FFFFFF?text=DJ+Setup" alt="DJ Setup">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/4CAF50/FFFFFF?text=Dancing+Crowd" alt="Dancing Crowd">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://placehold.co/800x500/4CAF50/FFFFFF?text=Stage+View" alt="Stage View">
+                    </div>
+                    <button class="carousel-prev">❮</button>
+                    <button class="carousel-next">❯</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="reservations" class="section-padded">
-            <div class="container">
-                <h2>Make a Reservation</h2>
-                <p>Book your table or VIP lounge experience at The Manhattan Nairobi.</p>
-                <form class="reservation-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date:</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="time">Time:</label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="guests">Number of Guests:</label>
-                        <input type="number" id="guests" name="guests" min="1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="occasion">Occasion (optional):</label>
-                        <input type="text" id="occasion" name="occasion">
-                    </div>
-                    <div class="form-group">
-                        <label for="notes">Special Requests:</label>
-                        <textarea id="notes" name="notes" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Confirm Reservation</button>
-                </form>
-                <p class="reservation-note">For groups larger than 10 or special events, please call us directly.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="section-padded bg-dark text-white">
+        <section id="contact" class="section-padded section-dark">
             <div class="container">
                 <h2>Contact Us</h2>
                 <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Location: First Floor,Imaara Mall Nairobi, Kenya</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: First Floor, Imaara Mall Nairobi, Kenya</p>
                     <p><i class="fas fa-phone"></i> Phone: <a href="tel:+254757309894">+254 757309894</a></p>
                     <p><i class="fas fa-envelope"></i> Email: <a href="mailto:imaara@manhattan.co.ke">imaara@manhattan.co.ke</a></p>
                     <p><i class="fas fa-clock"></i> Hours: Mon - Thu: 5 PM - 2 AM | Fri - Sat: 5 PM - 5 AM | Sun: 6 PM - 1 AM</p>
                 </div>
                 <div class="social-media-links">
-                    <a href="https://www.facebook.com/share/1HunGgAHMb/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/themanhattanke?igsh=MW5vZnE1czIzeWozYQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@themanhattanke?_t=ZM-8y60diFSuaU&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/share/1HunGgAHMb/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/themanhattanke?igsh=MW5vZnE1czIzeWozYQ==" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@themanhattanke?_t=ZM-8y60diFSuaU&_r=1" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.247293526154!2d36.81722295!3d-1.29206595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d0b6b%3A0xf6399e5a1b0d2d3!2sNairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7462114035175!2d36.879367373977765!3d-1.3282818986591254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f13040cca3027%3A0xd710b904557488db!2sThe%20Imaara%20Shopping%20Mall!5e0!3m2!1sen!2ske!4v1753772446506!5m2!1sen!2ske" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -161,6 +194,5 @@
             <p>© 2025 The Manhattan Nairobi. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
