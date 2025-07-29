@@ -400,6 +400,61 @@ nav .logo a {
     margin-right: 5px;
 }
 
+/* Events Calendar Specific Styles */
+.event-month {
+    margin-bottom: 40px;
+}
+
+.event-month h3 {
+    color: #222; /* Keep original color for month headers */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.event-item-full {
+    background-color: #1a1a1a; /* Dark background similar to event-item */
+    color: #f8f8f8; /* Light text color for contrast */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Align text left as in the example */
+}
+
+.event-item-full:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.event-item-full h4 {
+    color: #A0522D; /* Sienna for event titles */
+    font-size: 1.8em; /* Slightly larger for prominence */
+    margin-bottom: 10px;
+}
+
+.event-item-full .event-date {
+    color: #bbb; /* Lighter color for date */
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.event-item-full p {
+    color: #f8f8f8; /* Light text for descriptions */
+    margin-bottom: 10px;
+}
+
+
 /* Gallery Section */
 .gallery-grid {
     display: grid;
@@ -573,6 +628,13 @@ footer {
     /* Gallery */
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Events Calendar Specific Styles - Responsive */
+    .event-item-full {
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px;
     }
 }
 
