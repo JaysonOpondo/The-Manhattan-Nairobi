@@ -82,20 +82,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let s = 0; s < menuSections.length; s++) {
             ul = menuSections[s].getElementsByTagName('ul')[0];
-            if (!ul) continue; // Skip if no ul in section
+            if (!ul) continue;
 
             li = ul.getElementsByTagName('li');
             let sectionHasVisibleItems = false;
 
             for (i = 0; i < li.length; i++) {
-                // For food, items might have strong (e.g., "1/2 KG") or just be text.
-                // We'll search the entire li text content.
-                txtValue = li[i].textContent || li[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                    sectionHasVisibleItems = true;
-                } else {
-                    li[i].style.display = "none";
+                // Target the strong tag for the dish name, or the li itself if no strong
+                a = li[i].getElementsByTagName('strong')[0] || li[i];
+                if (a) {
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                        sectionHasVisibleItems = true;
+                    } else {
+                        li[i].style.display = "none";
+                    }
                 }
             }
             if (sectionHasVisibleItems || filter === "") {
@@ -106,41 +108,59 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- Image Carousel Functionality for multiple carousels ---
-    const allCarouselContainers = document.querySelectorAll('.carousel-container');
+    // --- Back to Top Button ---
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            // Show the button when the user scrolls down 200px
+            if (window.scrollY > 200) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
 
-    allCarouselContainers.forEach(container => {
-        const slides = container.querySelectorAll('.carousel-slide');
-        const dots = container.querySelectorAll('.dot');
-        const prevButton = container.querySelector('.carousel-prev');
-        const nextButton = container.querySelector('.carousel-next');
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // --- Image Carousel (Gallery) ---
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
         let currentSlide = 0;
-        let slideInterval; // Variable to hold the interval ID for auto-swiping
+        let slideInterval;
+        const slides = carousel.querySelectorAll('.carousel-slide img, .carousel-slide video');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        const prevButton = carousel.querySelector('.carousel-prev');
+        const nextButton = carousel.querySelector('.carousel-next');
 
         function showSlide(index) {
             slides.forEach((slide, i) => {
                 slide.style.display = 'none';
-                if (dots[i]) {
-                    dots[i].classList.remove('active');
+                if (slides[i].tagName === 'VIDEO') {
+                    slides[i].pause();
                 }
             });
+            dots.forEach(dot => dot.classList.remove('active'));
 
-            if (index >= slides.length) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else {
-                currentSlide = index;
-            }
-
+            currentSlide = (index + slides.length) % slides.length;
             slides[currentSlide].style.display = 'block';
-            if (dots[currentSlide]) {
-                dots[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+
+            // Autoplay the video if the current slide is a video
+            if (slides[currentSlide].tagName === 'VIDEO') {
+                slides[currentSlide].play();
             }
         }
 
         function changeSlide(n) {
-            resetAutoSwipe(); // Reset auto-swipe on manual navigation
+            resetAutoSwipe();
             showSlide(currentSlide + n);
         }
 
@@ -176,6 +196,47 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoSwipe();
         }
     });
+
+    // --- Gallery Modal Functionality ---
+    window.openModal = function(img) {
+        var modal = document.getElementById("galleryModal");
+        var modalImg = document.getElementById("modalImg");
+        var modalVideo = document.getElementById("modalVideo");
+        var captionText = document.getElementById("caption");
+        var videoSrc = img.getAttribute('data-video');
+
+        modal.style.display = "block";
+        captionText.innerHTML = img.alt;
+
+        if (videoSrc) {
+            modalImg.style.display = "none";
+            modalVideo.style.display = "block";
+            modalVideo.src = videoSrc;
+            modalVideo.load();
+            modalVideo.play();
+        } else {
+            modalVideo.pause();
+            modalVideo.style.display = "none";
+            modalImg.style.display = "block";
+            modalImg.src = img.src;
+        }
+    };
+
+    window.closeModal = function() {
+        var modal = document.getElementById("galleryModal");
+        var modalVideo = document.getElementById("modalVideo");
+        modal.style.display = "none";
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+    };
+
+    var closeBtn = document.querySelector('.gallery-modal .close');
+    if (closeBtn) {
+        closeBtn.onclick = function(event) {
+            event.stopPropagation();
+            window.closeModal();
+        };
+    }
 });
 
 // Keyframe animation for nav links
@@ -191,6 +252,5 @@ styleSheet.innerText = `
         opacity: 1;
         transform: translateX(0px);
     }
-}
-`;
+}`;
 document.head.appendChild(styleSheet);
