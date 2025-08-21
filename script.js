@@ -198,7 +198,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Gallery Modal Functionality ---
+    let galleryItems = [];
+    let currentGalleryIndex = 0;
+    let galleryAutoScrollInterval = null;
+    let galleryVideoEndedListener = null;
+
     window.openModal = function(img) {
+        // Get all gallery items in order
+        galleryItems = Array.from(document.querySelectorAll('.gallery-item img'));
+        currentGalleryIndex = galleryItems.indexOf(img);
+
         var modal = document.getElementById("galleryModal");
         var modalImg = document.getElementById("modalImg");
         var modalVideo = document.getElementById("modalVideo");
@@ -208,19 +217,44 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = "block";
         captionText.innerHTML = img.alt;
 
+        // Remove previous video ended listener if any
+        if (galleryVideoEndedListener) {
+            modalVideo.removeEventListener('ended', galleryVideoEndedListener);
+            galleryVideoEndedListener = null;
+        }
+
         if (videoSrc) {
             modalImg.style.display = "none";
             modalVideo.style.display = "block";
             modalVideo.src = videoSrc;
             modalVideo.load();
             modalVideo.play();
+
+            // Only auto-scroll after video ends
+            clearInterval(galleryAutoScrollInterval);
+            galleryVideoEndedListener = function() {
+                showNextGalleryItem();
+            };
+            modalVideo.addEventListener('ended', galleryVideoEndedListener);
         } else {
             modalVideo.pause();
             modalVideo.style.display = "none";
             modalImg.style.display = "block";
             modalImg.src = img.src;
+
+            // Auto-scroll for images only
+            clearInterval(galleryAutoScrollInterval);
+            galleryAutoScrollInterval = setInterval(() => {
+                showNextGalleryItem();
+            }, 4000); // Change every 4 seconds
         }
     };
+
+    function showNextGalleryItem() {
+        if (!galleryItems.length) return;
+        currentGalleryIndex = (currentGalleryIndex + 1) % galleryItems.length;
+        galleryItems[currentGalleryIndex].click();
+    }
 
     window.closeModal = function() {
         var modal = document.getElementById("galleryModal");
@@ -228,6 +262,11 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = "none";
         modalVideo.pause();
         modalVideo.currentTime = 0;
+        clearInterval(galleryAutoScrollInterval);
+        if (galleryVideoEndedListener) {
+            modalVideo.removeEventListener('ended', galleryVideoEndedListener);
+            galleryVideoEndedListener = null;
+        }
     };
 
     var closeBtn = document.querySelector('.gallery-modal .close');
