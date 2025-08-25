@@ -108,6 +108,18 @@ nav .logo a {
     width: 100%;
 }
 
+.site-logo {
+    height: 50px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover .site-logo {
+    transform: scale(1.1);
+}
+
+
 /* Burger Icon (for mobile) */
 .burger {
     display: none; 
@@ -390,13 +402,27 @@ nav .logo a {
     margin-top: 30px;
 }
 
-.gellery-item img{
+.gallery-item img{
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gellery-item video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item img:hover {
