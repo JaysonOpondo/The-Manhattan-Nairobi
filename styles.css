@@ -562,7 +562,6 @@ footer {
     border: 0;
 }
 
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     body.nav-active {
